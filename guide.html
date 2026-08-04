@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guide du Tourisme Médical en Tunisie - Santévia Tunis</title>
+    <meta name="description" content="Tout savoir sur le tourisme médical en Tunisie : cliniques, prix, démarches. Guide PDF exclusif." />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="medical.css" />
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo-santevia">
+                <div class="logo-icon"><i class="fas fa-heartbeat"></i></div>
+                <div class="logo-text">
+                    <span class="santevia">Santévia</span>
+                    <span class="tunis">Tunis</span>
+                    <span class="flag">🇹🇳</span>
+                </div>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#guide">Guide</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-padding" style="padding-top:120px;">
+            <div class="container">
+                <div class="guide-wrapper" style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
+                    <div>
+                        <span class="section-tag">📘 Guide exclusif</span>
+                        <h1 style="font-size:3rem; margin-bottom:1rem;">Le Guide Ultime du Tourisme Médical en Tunisie</h1>
+                        <p style="font-size:1.25rem; color:var(--color-gray-dark); margin-bottom:2rem;">
+                            Découvrez toutes les clés pour réussir votre parcours médical en Tunisie.
+                        </p>
+
+                        <div style="background:var(--color-light); padding:2rem; border-radius:var(--border-radius-lg); margin-bottom:2rem;">
+                            <h3>Ce que vous allez apprendre :</h3>
+                            <ul style="list-style:none; padding:0;">
+                                <li style="padding:0.5rem 0; border-bottom:1px solid var(--color-gray);">
+                                    <i class="fas fa-check-circle" style="color:var(--color-secondary);"></i>
+                                    Les meilleures cliniques par spécialité
+                                </li>
+                                <li style="padding:0.5rem 0; border-bottom:1px solid var(--color-gray);">
+                                    <i class="fas fa-check-circle" style="color:var(--color-secondary);"></i>
+                                    Prix comparés avec l'Europe (jusqu'à -70%)
+                                </li>
+                                <li style="padding:0.5rem 0; border-bottom:1px solid var(--color-gray);">
+                                    <i class="fas fa-check-circle" style="color:var(--color-secondary);"></i>
+                                    Démarches administratives simplifiées
+                                </li>
+                                <li style="padding:0.5rem 0; border-bottom:1px solid var(--color-gray);">
+                                    <i class="fas fa-check-circle" style="color:var(--color-secondary);"></i>
+                                    Conseils pour préparer son séjour
+                                </li>
+                                <li style="padding:0.5rem 0;">
+                                    <i class="fas fa-check-circle" style="color:var(--color-secondary);"></i>
+                                    Checklist complète avant le départ
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div style="display:flex; align-items:center; gap:2rem; flex-wrap:wrap; margin-bottom:2rem;">
+                            <div>
+                                <span style="font-size:2rem; font-weight:800; color:var(--color-primary);">29€</span>
+                                <span style="text-decoration:line-through; color:var(--color-gray-dark); margin-left:0.5rem;">49€</span>
+                            </div>
+                            <span style="background:var(--color-secondary); color:white; padding:0.25rem 1rem; border-radius:50px; font-weight:600;">Offre limitée</span>
+                        </div>
+
+                        <!-- BOUTON D'ACHAT -->
+                        <div id="payment-button" style="text-align:center;">
+                            <button id="buyGuideBtn" class="btn btn-primary btn-large" style="width:100%; justify-content:center; font-size:1.25rem;">
+                                <i class="fas fa-shopping-cart"></i> Acheter maintenant - 29€
+                            </button>
+                            <p style="margin-top:1rem; font-size:0.875rem; color:var(--color-gray-dark);">
+                                <i class="fas fa-lock"></i> Paiement sécurisé par Stripe
+                            </p>
+                        </div>
+                    </div>
+
+                    <div style="background:linear-gradient(135deg, var(--color-primary), var(--color-secondary)); border-radius:var(--border-radius-lg); padding:3rem; text-align:center; color:white;">
+                        <i class="fas fa-book-open" style="font-size:8rem; margin-bottom:2rem;"></i>
+                        <h2 style="color:white;">Guide PDF</h2>
+                        <p style="color:rgba(255,255,255,0.9);">Téléchargement immédiat après paiement</p>
+                        <div style="margin-top:2rem; background:rgba(255,255,255,0.2); padding:1rem; border-radius:var(--border-radius-md);">
+                            <p style="margin:0; color:white;">Plus de 50 pages d'informations pratiques</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Santévia Tunis. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        document.getElementById('buyGuideBtn').addEventListener('click', function() {
+            // Pour l'instant, redirection vers une page de paiement simulée
+            // Remplacez ceci par votre intégration Stripe réelle
+            alert('🔗 Redirection vers la page de paiement Stripe...');
+            // window.location.href = 'https://buy.stripe.com/votre-lien';
+        });
+    </script>
+</body>
+</html>
