@@ -215,6 +215,7 @@ document.addEventListener('DOMContentLoaded', function() {
             this.form = document.querySelector('#contactForm');
             this.successMessage = document.getElementById('successMessage');
             this.submitButton = this.form ? this.form.querySelector('button[type="submit"]') : null;
+            // Configurez vos identifiants EmailJS ici
             this.SERVICE_ID = 'service_votre_id';
             this.TEMPLATE_ID = 'template_votre_id';
             this.PUBLIC_KEY = 'user_votre_cle';
